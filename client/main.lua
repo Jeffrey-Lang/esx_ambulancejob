@@ -222,7 +222,10 @@ function StartDeathTimer()
 			AddTextComponentString(text)
 			DrawText(0.5, 0.8)
 		end
-
+			
+		if bleedoutTimer < 1 and IsDead then
+			RemoveItemsAfterRPDeath()
+		end
 	end)
 end
 
